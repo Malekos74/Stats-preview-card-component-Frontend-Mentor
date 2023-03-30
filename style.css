@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Bold.woff2') format('woff2'),
+        url('fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.woff2') format('woff2'),
+        url('fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('fonts/LexendDeca-Regular.woff2') format('woff2'),
+        url('fonts/LexendDeca-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.attribution {
+    display: none;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 98vh;
+}
+html {
+    background-color: hsl(233, 47%, 7%);
+}
+.text {
+    text-align: center;
+}
+.desc,.stat-type {
+    font-family: Lexend Deca;
+    font-size: 0.95rem;
+    width: 85%;
+    margin: auto;
+    font-weight: normal;
+    color: hsla(0, 0%, 100%, 0.516);
+
+
+}
+.img {
+    background-image: url('images/image-header-mobile.jpg');
+    background-size: cover;
+    filter: grayscale(100%) sepia(100%) hue-rotate(235deg) brightness(0.9) contrast(1.0);
+    width: 20em;
+    height: 12em;
+
+    border-radius: 1rem 1rem 0 0;
+}
+.title {
+    margin:auto;
+    font-size: 0.9rem;
+    width: 27ch;
+    padding-top: 1rem;
+}
+b {
+    color: hsl(277, 64%, 61%);
+}
+.heading {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: Inter;
+    font-weight: bold;
+}
+.card {
+    background-color: hsl(244, 38%, 16%);
+    width: 20em;
+    min-height: 35em;
+    border-radius: 1rem;
+}
+.stats {
+    margin-bottom: 2rem;
+}
+.stat {
+    padding-top: 2rem;
+}
+.number {
+    font-size: 1.5rem;
+}
+.stat-type {
+    letter-spacing: 1px;
+    font-size:0.8rem;
+}
+/* Desktop Display */
+@media (min-width : 80em) {
+    .text {
+        text-align: left;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'text image';
+
+        max-height: 20em;
+        width: 80%;
+    }
+    .img {
+        grid-area: image;
+
+        background-image: url('images/image-header-desktop.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;
+        filter: grayscale(100%) sepia(100%) hue-rotate(235deg) brightness(0.9) contrast(1.0);
+        width: 100%;
+        height: 100%;
+    
+        border-radius: 0rem 1rem 1rem 0;
+        padding: 0;
+        margin: 0;
+    }
+    .title {
+        width: 35ch;
+        margin-left:5rem;
+        margin-top: 3rem;
+    }
+    .text {
+        grid-area: text;
+    }
+    .desc {
+        margin-left: 5rem;
+        padding-top: 1.5rem;
+        width: 40ch;
+        line-height: 1.5rem;
+    }
+    .stats {
+        margin-left: 5rem;
+        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'cmp tmp qrr';
+    }
+    .companies {
+        grid-area: cmp;
+    }
+    .templates {
+        grid-area:tmp;
+    }
+    .queries {
+        grid-area: qrr;
+    }
+    .stat-type {
+        margin-left: 0;
+        padding-top: 0.25rem;
+    }
+}
